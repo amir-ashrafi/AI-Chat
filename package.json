@@ -1,0 +1,48 @@
+{
+  "name": "chatbot",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.79",
+    "@ai-sdk/google": "^4.0.95",
+    "@ai-sdk/openai": "^4.0.93",
+    "@ai-sdk/vue": "^4.0.140",
+    "@comark/nuxt": "^0.7.0",
+    "@comark/vue": "^0.7.0",
+    "@libsql/client": "^0.18.0",
+    "@nuxt/ui": "^4.11.3",
+    "@nuxthub/core": "^0.10.8",
+    "@nuxtjs/color-mode": "4.0.1",
+    "@shikijs/langs": "^4.5.0",
+    "@vercel/blob": "^2.8.2",
+    "@vueuse/nuxt": "15.0.0",
+    "ai": "^7.0.140",
+    "ai-sdk-ollama": "^4.5.0",
+    "date-fns": "^4.4.0",
+    "drizzle-orm": "^0.45.4",
+    "motion-v": "^2.7.0",
+    "nuxt": "^4.6.1",
+    "nuxt-auth-utils": "0.5.31",
+    "nuxt-charts": "2.2.3",
+    "nuxt-csurf": "1.6.6",
+    "ollama-ai-provider": "^1.2.0",
+    "shiki": "^4.5.0",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.43",
+    "vue-router": "^5.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.144",
+    "@iconify-json/simple-icons": "^1.2.100",
+    "@nuxt/eslint": "^1.17.0",
+    "drizzle-kit": "^0.31.11"
+  }
+}
