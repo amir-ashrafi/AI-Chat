@@ -192,9 +192,11 @@ const items = computed<DropdownMenuItem[][]>(() => [
       variant="ghost"
       block
       :square="collapsed"
-      class="rounded-xl data-[state=open]:bg-elevated"
+      class="rounded-xl  data-[state=open]:bg-elevated"
       :ui="{
-        trailingIcon: 'text-dimmed'
+        trailingIcon: 'text-dimmed',
+        leadingAvatarSize: 'lg'
+
       }"
     />
 

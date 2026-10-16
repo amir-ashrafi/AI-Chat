@@ -71,7 +71,7 @@ defineShortcuts({
 </script>
 
 <template>
-  <UDashboardGroup unit="rem">
+  <UDashboardGroup class="dark:bg-[url('/image/1.png')] bg-[url('/image/11.png')]  bg-no-repeat bg-bottom bg-cover " unit="rem">
     <UDashboardSidebar
       id="default"
       v-model:open="sidebarOpen"
@@ -79,7 +79,9 @@ defineShortcuts({
       collapsible
       resizable
       :menu="{ inset: true }"
-      class="border-r-0 py-4 dark:[--ui-bg-elevated:var(--ui-color-neutral-900)]"
+      class="border-r-0 py-4 dark:bg-[url('/image/bg-dark-defolut.png')]  dark:[--ui-bg-elevated:var(--ui-color-neutral-900)] min-h-screen bg-[url('/image/bg-defoult.png')] bg-no-repeat bg-bottom bg-cover
+"
+      
     >
       <template #header="{ collapsed }">
         <NuxtLink
@@ -157,8 +159,8 @@ defineShortcuts({
         </UNavigationMenu>
       </template>
 
-      <template #footer="{ collapsed }">
-        <UserMenu v-if="loggedIn" :collapsed="collapsed" />
+      <template  #footer="{ collapsed }">
+        <UserMenu class="py-3 cursor-pointer dark:bg-gray-700/70 bg-white/70" v-if="loggedIn" :collapsed="collapsed" />
         <UButton
           v-else
           :label="collapsed ? '' : 'Login with GitHub'"
@@ -185,7 +187,7 @@ defineShortcuts({
       }, ...groups]"
     />
 
-    <div class="flex-1 flex m-4 lg:ml-0 rounded-lg ring ring-default bg-default/75 shadow-sm min-w-0 overflow-hidden">
+    <div class="flex-1 flex m-4 lg:ml-0 rounded-lg ring ring-default bg-default/50 shadow-sm min-w-0 overflow-hidden">
       <slot />
     </div>
   </UDashboardGroup>

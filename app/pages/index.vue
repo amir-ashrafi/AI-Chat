@@ -95,15 +95,15 @@ const quickChats = [
 <template>
   <UDashboardPanel
     id="home"
-    class="min-h-0"
-    :ui="{ body: 'p-0 sm:p-0' }"
+    class="min-h-0 bg-blue-500/0"
+    :ui="{ body: 'p-0 sm:p-0 ' }"
   >
     <template #header>
-      <Navbar />
+      <Navbar/>
     </template>
 
     <template #body>
-      <div ref="dropzoneRef" class="flex flex-1">
+      <div ref="dropzoneRef" class="flex flex-1 ">
         <DragDropOverlay :show="dragging" />
 
         <UContainer class="flex-1 flex flex-col justify-center gap-4 sm:gap-6 py-8">
