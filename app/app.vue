@@ -29,7 +29,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/chat-light.png',
+  ogImage: 'https://ai-chat-eight-green.vercel.app/og-image.png',
   twitterCard: 'summary_large_image'
 })
 
