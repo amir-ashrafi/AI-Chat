@@ -44,11 +44,11 @@ onMounted(async () => {
   try {
     await logo.decode()
   } catch {
-    // در صورت خطای لوگو، باز هم ۳ ثانیه صبر می‌کنیم.
+    
   }
 
   const elapsed = Date.now() - startTime
-  const remaining = Math.max(0, 2000 - elapsed)
+  const remaining = Math.max(0, 1500 - elapsed)
 
   await new Promise(resolve => setTimeout(resolve, remaining))
 
