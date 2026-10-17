@@ -42,7 +42,10 @@ function getErrorMessage(error: unknown) {
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event)
   const ollama = createOllama({
-    baseURL: getOllamaHost(config.ollamaBaseURL)
+    baseURL: getOllamaHost(config.ollamaBaseURL),
+    headers: {
+      Authorization: `Bearer ${config.ollamaProxyToken}`
+    }
   })
   const groq = createOpenAI({
     name: 'groq',

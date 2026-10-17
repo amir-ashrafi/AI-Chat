@@ -31,7 +31,8 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    ollamaBaseURL: 'http://127.0.0.1:11434',
+    ollamaBaseURL: 'https://amir-aspire-al16-52p.tail3de62a.ts.net',
+    ollamaProxyToken: '',
     groqApiKey: ''
   },
   devtools: { enabled: true }
