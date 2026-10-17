@@ -74,67 +74,42 @@ Replace `<https://github.com/amir-ashrafi/AI-Chat>` with your Git repository URL
 pnpm install
 ```
 
-### 3. Configure Environment Variables
+## Environment Variables
 
-Create your local environment file:
+Create a `.env` file and configure the required variables:
 
-```bash
-cp .env.example .env
+```env
+# GitHub OAuth
+NUXT_OAUTH_GITHUB_CLIENT_ID=""
+NUXT_OAUTH_GITHUB_CLIENT_SECRET=""
+
+# Session
+NUXT_SESSION_PASSWORD=""
+
+# Turso Database
+TURSO_DATABASE_URL=""
+TURSO_AUTH_TOKEN=""
+
+# Ollama
+OLLAMA_BASE_URL="http://127.0.0.1:11434/v1"
+NUXT_OLLAMA_BASE_URL=""
+NUXT_OLLAMA_PROXY_TOKEN=""
+
+# AI Providers
+AI_GATEWAY_API_KEY=""
+ANTHROPIC_API_KEY=""
+GOOGLE_GENERATIVE_AI_API_KEY=""
+GROQ_API_KEY=""
+OPENAI_API_KEY=""
+
+# Optional Services
+BLOB_READ_WRITE_TOKEN=""
+VERCEL_OIDC_TOKEN=""
 ```
 
-Open `.env` and configure the variables required by your application.
+Configure only the variables required for your setup. Add your actual secrets to `.env.local` locally and to Vercel Environment Variables in production.
 
-Important variables include:
-
-# Vercel AI Gateway — Vercel Dashboard → AI Gateway
-AI_GATEWAY_API_KEY="your-vercel-ai-gateway-api-key"
-
-# Anthropic — https://console.anthropic.com/
-ANTHROPIC_API_KEY="your-anthropic-api-key"
-
-# Vercel Blob — Vercel Dashboard → Storage → Blob
-BLOB_READ_WRITE_TOKEN="your-vercel-blob-read-write-token"
-
-# Google Gemini — https://aistudio.google.com/apikey
-GOOGLE_GENERATIVE_AI_API_KEY="your-google-generative-ai-api-key"
-
-# Groq — https://console.groq.com/keys
-GROQ_API_KEY="your-groq-api-key"
-
-# GitHub OAuth — https://github.com/settings/developers
-# OAuth Apps → Your Application
-NUXT_OAUTH_GITHUB_CLIENT_ID="your-github-oauth-client-id"
-NUXT_OAUTH_GITHUB_CLIENT_SECRET="your-github-oauth-client-secret"
-
-# Generate a secure random session password
-# Example: openssl rand -hex 32
-NUXT_SESSION_PASSWORD="your-long-random-session-secret"
-
-# Local Ollama endpoint for local development
-OLLAMA_BASE_URL="http://127.0.0.1:11434/v1"
-
-# OpenAI — https://platform.openai.com/api-keys
-OPENAI_API_KEY="your-openai-api-key"
-
-# Turso — https://turso.tech/
-# Database → Generate database token
-TURSO_AUTH_TOKEN="your-turso-database-auth-token"
-
-# Turso Dashboard → Your Database → Connection URL
-TURSO_DATABASE_URL="libsql://your-database-name-your-org.turso.io"
-
-# Vercel CLI-generated token for supported development workflows
-# Usually managed by Vercel CLI; do not copy a personal token into the example
-VERCEL_OIDC_TOKEN=""
-
-# Remote Ollama proxy — configure in Vercel Environment Variables
-# Replace with your public HTTPS Tailscale Funnel URL
-NUXT_OLLAMA_BASE_URL="https://your-tailscale-funnel-address"
-
-# Private proxy token generated in ~/ollama-proxy/.token
-NUXT_OLLAMA_PROXY_TOKEN="your-private-ollama-proxy-token"
-
-
+**Never commit `.env.local` or expose your API keys and tokens.**
 Only configure the providers and services used by your application.
 
 **Security:** Never commit your `.env` file, API keys, OAuth secrets, session passwords, or proxy tokens to Git.
