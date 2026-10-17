@@ -16,7 +16,11 @@ export default defineNuxtConfig({
   },
 
   hub: {
-    db: 'sqlite',
+    db: {
+      dialect: 'sqlite',
+      driver: 'libsql',
+      applyMigrationsDuringBuild: false
+    },
     blob: true
   },
 
