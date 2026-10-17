@@ -30,7 +30,8 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
   ogImage: 'https://ai-chat-amir-ashrafi.vercel.app/og-image.png',
-  twitterCard: 'summary_large_image'
+  twitterImage: 'https://ai-chat-amir-ashrafi.vercel.app/og-image-v2.png',
+twitterCard: 'summary_large_image'
 })
 
 const isReady = ref(false)
